@@ -1,0 +1,16 @@
+<html ng-app>
+	<head>
+		<script src="../../angular.js"></script>
+		<script src="controllers.js"></script>
+	</head>
+	
+	<body>
+		<table ng-controller='albumController'>
+			<tr ng-repeat='track in album'>
+				<td>{{$index+1}}</td>
+				<td>{{track.name}}</td>
+				<td>{{track.duration}}</td>
+			</tr>
+		</table>
+	</body>
+</html>
