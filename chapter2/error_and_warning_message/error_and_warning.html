@@ -1,0 +1,26 @@
+<html ng-app>
+	<head>
+		<script src="../../angular.js"></script>
+		<script src="controllers.js"></script>
+		<style>
+			.error{
+				color:red;
+			}
+			
+			.warning{
+				color:yellow;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div ng-controller="HeaderController">
+			<div ng-class="{error:isError, warning:isWarning}">
+				{{messageText}}
+			</div>
+			<button ng-click="showError()">Simulate Error</button>
+			<button ng-click="showWarning()">Simulate Warning</button>
+		</div>
+	</body>
+
+</html>
